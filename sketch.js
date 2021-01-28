@@ -21,8 +21,8 @@ function setup(){
     sur4=createSprite(700,550,175,25)
     sur4.shapeColor="yellow"
     box=createSprite(random(20,750),150,20,20)
-    box.velocityX=3
-    box.velocityY=3
+    box.velocityX=3.8
+    box.velocityY=3.4
     edge1=createSprite(-10,300,20,600)
     edge2=createSprite(810,300,20,600)
     edge3=createSprite(400,610,800,20)
@@ -52,6 +52,7 @@ function draw() {
     }
     else if (box.isTouching(sur3)){
         box.shapeColor="blue"
+        music.play()
     }
     else if (box.isTouching(sur4)){
         box.shapeColor="yellow"
