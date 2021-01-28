@@ -42,9 +42,13 @@ function draw() {
     //create edgeSprite
     if (box.isTouching(sur1)){
         box.shapeColor="red"
+        music.play()
     }
     else if (box.isTouching(sur2)){
         box.shapeColor="green"
+        music.stop()
+        box.velocityX=0
+        box.velocityY=0
     }
     else if (box.isTouching(sur3)){
         box.shapeColor="blue"
