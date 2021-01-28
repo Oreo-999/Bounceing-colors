@@ -40,7 +40,7 @@ function draw() {
     drawSprites();
     createEdgeSprites();
     //create edgeSprite
-    if (box.isTouching(sur1)){
+    if (box.isTouching(sur1)&&  box.bounceOff(sur1)){
         box.shapeColor="red"
         music.play()
     }
@@ -50,17 +50,13 @@ function draw() {
         box.velocityX=0
         box.velocityY=0
     }
-    else if (box.isTouching(sur3)){
+    else if (box.isTouching(sur3)&&  box.bounceOff(sur3)){
         box.shapeColor="blue"
         music.play()
     }
-    else if (box.isTouching(sur4)){
+    else if (box.isTouching(sur4)&&  box.bounceOff(sur4)){
         box.shapeColor="yellow"
     }
-    box.bounceOff(sur1)
-    box.bounceOff(sur2)
-    box.bounceOff(sur3)
-    box.bounceOff(sur4)
     box.bounceOff(edge1)
     box.bounceOff(edge2)
     box.bounceOff(edge3)
